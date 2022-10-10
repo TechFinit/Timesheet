@@ -1,0 +1,16 @@
+application {
+
+    config {
+    baseName times
+    packageName com.tfs.times
+    applicationType monolith
+
+  }
+    entities *
+}
+entity Customer{
+CustomerId Integer
+CustomerName String
+Description String
+CustomerIsactive Boolean
+}
