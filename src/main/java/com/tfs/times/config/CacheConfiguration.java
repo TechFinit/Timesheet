@@ -48,6 +48,12 @@ public class CacheConfiguration {
             createCache(cm, com.tfs.times.domain.User.class.getName());
             createCache(cm, com.tfs.times.domain.Authority.class.getName());
             createCache(cm, com.tfs.times.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.tfs.times.domain.Customer.class.getName());
+            createCache(cm, com.tfs.times.domain.Project.class.getName());
+            createCache(cm, com.tfs.times.domain.UserTask.class.getName());
+            createCache(cm, com.tfs.times.domain.Timesheetdetails.class.getName());
+            createCache(cm, com.tfs.times.domain.Timesheet.class.getName());
+            createCache(cm, com.tfs.times.domain.Timesheetstatus.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

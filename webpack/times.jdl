@@ -4,7 +4,10 @@ application {
     baseName times
     packageName com.tfs.times
     applicationType monolith
-
+        prodDatabaseType postgresql
+        devDatabaseType postgresql
+        databaseType sql
+        buildTool maven
   }
     entities *
 }
@@ -13,4 +16,36 @@ CustomerId Integer
 CustomerName String
 Description String
 CustomerIsactive Boolean
+}
+entity Project{
+    CustomerId Integer
+    ProjectId Integer
+    projectName String
+    Description String
+    Startdate LocalDate
+    Enddate   LocalDate
+}
+entity UserTask{
+    UsertaskId Integer
+    projectid Integer
+    UserId Integer
+}
+entity Timesheetdetails{
+    timesheetdetailId Integer
+    timesheetid Integer
+    taskId Integer
+    timeofftimeId Integer
+    workdate LocalDate
+    workinghours Integer
+}
+entity Timesheet{
+    timmesheetId Integer
+    userId Integer
+    periodendingdate LocalDate
+    notes String
+    periodstartingdate LocalDate
+}
+entity Timesheetstatus{
+    timesheetstatusId Integer
+    statusname String
 }
